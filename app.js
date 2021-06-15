@@ -48,6 +48,8 @@ function addCard(event) {
   const dispData = document.createElement("div");
   dispData.classList.add("display-data");
   contDiv.appendChild(dispData);
+  dispData.innerHTML =
+    "hellower kljlksjdflkajsdflha shdfasdfklajs dskldfjasdhfasdfklajsdkfjasdkfasdgfasdfwoeuroieahangansdfhasdfhasdfjhaueihatisdtiouasiotsahjkfhdadfasjdkfljasdf";
 
   // Cross Icon
   const crossIcon = document.createElement("i");

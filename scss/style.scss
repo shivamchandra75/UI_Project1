@@ -22,6 +22,7 @@ body {
   display: flex;
   justify-content: space-evenly;
   align-items: flex-start;
+  flex-wrap: wrap;
 
   & .button {
     position: absolute;
@@ -47,15 +48,32 @@ body {
     }
   }
   .cont-div {
-    border: 2px solid black;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0.5rem;
+    border: 2px solid black;
+    border-radius: 0.5rem;
 
     & .line {
       background-color: $primarycolor;
       width: 0.125rem;
-      height: 4rem;
+      height: 6rem;
+      margin: 0.75rem;
+    }
+
+    & .cross-icon {
+      margin: 0.75rem;
+    }
+  }
+
+  & .data {
+    margin: 0.75rem;
+    .title-input::before {
+      content: "Title";
+    }
+    .title-input {
+      margin: 0.75rem;
     }
   }
 }
