@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: white;
+  color: #4d4d4d;
+}
+
+#main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+#main .button {
+  position: absolute;
+  bottom: 5rem;
+  right: 5rem;
+  background-color: #0048b4;
+  border-radius: 6rem;
+  width: 6rem;
+  height: 6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#main .button .btn {
+  padding: 1rem;
+  border: none;
+  background: none;
+  color: white;
+  font-size: 3rem;
+}
+
+#main .button .btn .fa-plus {
+  pointer-events: none;
+}
+
+#main .cont-div {
+  border: 2px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#main .cont-div .line {
+  background-color: #0048b4;
+  width: 0.125rem;
+  height: 4rem;
+}
+/*# sourceMappingURL=style.css.map */
