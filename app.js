@@ -7,8 +7,7 @@ button.addEventListener("click", addCard);
 
 // !Functions
 function addCard(event) {
-  console.log("hello");
-  // DIV Container
+  // DIV Container --> The pop-up Card
   const contDiv = document.createElement("div");
   contDiv.classList.add("cont-div");
   main.appendChild(contDiv);
@@ -22,6 +21,7 @@ function addCard(event) {
   const titleForm = document.createElement("form");
   titleForm.classList.add("title");
   data.appendChild(titleForm);
+  titleForm.setAttribute("onsubmit", "return false;"); //prevents the Form from submitting when hit enter after in input tag.
 
   // Input
   const input = document.createElement("input");

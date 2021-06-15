@@ -27,7 +27,7 @@ body {
 }
 
 #main .button {
-  position: absolute;
+  position: fixed;
   bottom: 5rem;
   right: 5rem;
   background-color: #0048b4;
@@ -82,10 +82,6 @@ body {
 
 #main .data {
   margin: 0.75rem;
-}
-
-#main .data .title-input::before {
-  content: "Title";
 }
 
 #main .data .title-input {
