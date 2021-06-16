@@ -1,21 +1,23 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 // variables
 $primarycolor: #0048b4;
 $textcolor: #4d4d4d;
 $fontWeights: (
   "regular": 400,
-  "medium": 600,
-  "bold": 900,
+  "medium": 500,
+  "bold": 700,
+  "bolder": 900,
 );
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
+
 body {
   overflow-x: hidden;
-  background-color: white;
   color: $textcolor;
+  font-family: "Roboto", sans-serif;
 }
 
 #main {
@@ -47,33 +49,111 @@ body {
       }
     }
   }
-  .cont-div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0.5rem;
-    border: 2px solid black;
-    border-radius: 0.5rem;
+}
 
-    & .line {
-      background-color: $primarycolor;
-      width: 0.125rem;
-      height: 6rem;
-      margin: 0.75rem;
+.modal {
+  background-color: #fff;
+  border-radius: 2.5rem;
+  position: fixed; //line 55-58 will centre the element in the middle of the screen
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  width: 54rem;
+  max-width: 80%; // This is make sure that the modal doesn't getts too large &makes an overflow
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+
+  & > * {
+    margin: 0 1rem;
+  }
+
+  &.active {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+
+    & .title {
+      border: 1px solid $primarycolor;
+      padding: 0.188rem;
+      border-radius: 0.188rem;
+      margin-bottom: 1.5rem;
+
+      & input {
+        border: none;
+      }
     }
 
-    & .cross-icon {
-      margin: 0.75rem;
+    & .card-no {
+      border: 1px solid $primarycolor;
+      width: 2rem;
+      padding: 0 0.25rem;
+    }
+
+    & .heading {
+      margin-top: 1rem;
+    }
+
+    & form > * {
+      margin: 0.25rem 0;
     }
   }
 
-  & .data {
-    margin: 0.75rem;
-    // .title-input::before {
-    //   content: "Title";
-    // }
-    .title-input {
-      margin: 0.75rem;
+  .line {
+    width: 0.25rem;
+    background-color: $primarycolor;
+    height: 15rem;
+  }
+
+  //This is the DIV to display data
+  .display-data-container {
+    width: 28.5rem;
+    // background-color: coral;
+    height: 15.5rem;
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+
+    & .display-data {
+      border: 1px solid black;
+      border-radius: 0.25rem;
     }
+
+    & .buttons {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+  }
+
+  .cross {
+    font-size: 2.6rem;
+    color: $primarycolor;
+
+    & i {
+      transition: transform 0.35s ease;
+      &:hover {
+        transform: rotate(360deg);
+      }
+    }
+  }
+}
+
+#overlay {
+  position: absolute;
+  opacity: 1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  background: rgba(0, 0, 0, 0.5);
+
+  &.active {
+    opacity: 1;
   }
 }

@@ -23,16 +23,23 @@ function addCard(event) {
   data.appendChild(titleForm);
   titleForm.setAttribute("onsubmit", "return false;"); //prevents the Form from submitting when hit enter after in input tag.
 
+  // DIV for input and icon
+  const inputIcon = document.createElement("div");
+  inputIcon.classList.add("input-icon");
+  titleForm.appendChild(inputIcon);
+
   // Input
   const input = document.createElement("input");
   input.classList.add("title-input");
-  titleForm.appendChild(input);
+  inputIcon.appendChild(input);
+  input.setAttribute("type", "text");
+  input.setAttribute("placeholder", "write Something");
 
   // Icon
   const titleIcon = document.createElement("i");
   titleIcon.innerHTML = "<i class='fas fa-search'></i>";
   titleIcon.classList.add("title-icon");
-  titleForm.appendChild(titleIcon);
+  inputIcon.appendChild(titleIcon);
 
   // Description
   const description = document.createElement("textarea");
@@ -48,8 +55,6 @@ function addCard(event) {
   const dispData = document.createElement("div");
   dispData.classList.add("display-data");
   contDiv.appendChild(dispData);
-  dispData.innerHTML =
-    "hellower kljlksjdflkajsdflha shdfasdfklajs dskldfjasdhfasdfklajsdkfjasdkfasdgfasdfwoeuroieahangansdfhasdfhasdfjhaueihatisdtiouasiotsahjkfhdadfasjdkfljasdf";
 
   // Cross Icon
   const crossIcon = document.createElement("i");

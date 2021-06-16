@@ -20,6 +20,44 @@
         <button class="btn"><i class="fas fa-plus"></i></button>
       </div>
     </section>
+
+    <div class="modal" id="modal">
+      <div1 class="form">
+        <form onsubmit="return false">
+          <h4>Title</h4>
+          <div class="title">
+            <input type="text" />
+            <i class="fas fa-search"></i>
+          </div>
+
+          <h4>Card No</h4>
+          <div class="card-no">01</div>
+
+          <h4 class="heading">Description</h4>
+          <textarea
+            name="Description"
+            id="Description"
+            cols="20"
+            rows="4"
+          ></textarea>
+        </form>
+      </div1>
+
+      <div2 class="line"></div2>
+
+      <div3 class="display-data-container">
+        <div class="display-data"></div>
+
+        <div class="buttons">
+          <button id="publish">Publish</button>
+          <button id="cancel">Cancel</button>
+        </div>
+      </div3>
+
+      <div class="cross"><i class="fas fa-times"></i></div>
+    </div>
+
+    <div id="overlay"></div>
   </body>
   <script src="app.js"></script>
 </html>
