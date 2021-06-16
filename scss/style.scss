@@ -57,7 +57,7 @@ body {
   position: fixed; //line 55-58 will centre the element in the middle of the screen
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(0);
   width: 54rem;
   max-width: 80%; // This is make sure that the modal doesn't getts too large &makes an overflow
   z-index: 10;
@@ -66,6 +66,7 @@ body {
   align-items: center;
   padding: 1.5rem;
 
+  // This sets the margin of all direct child of modal
   & > * {
     margin: 0 1rem;
   }
@@ -104,13 +105,14 @@ body {
     }
   }
 
+  // This is the seperator line the second div of modal
   .line {
     width: 0.25rem;
     background-color: $primarycolor;
     height: 15rem;
   }
 
-  //This is the DIV to display data
+  //This is the DIV to display data third div of modal
   .display-data-container {
     width: 28.5rem;
     // background-color: coral;
@@ -123,19 +125,27 @@ body {
       border-radius: 0.25rem;
     }
 
+    // This is the div for buttons Publish and Cancel
     & .buttons {
       display: flex;
       align-items: center;
       justify-content: flex-end;
+
+      & > * {
+        margin-top: 1rem;
+      }
     }
   }
 
   .cross {
     font-size: 2.6rem;
     color: $primarycolor;
+    background: none;
+    border: none;
 
     & i {
-      transition: transform 0.35s ease;
+      // pointer-events: none;
+      transition: transform 0.3s ease;
       &:hover {
         transform: rotate(360deg);
       }
@@ -144,8 +154,8 @@ body {
 }
 
 #overlay {
-  position: absolute;
-  opacity: 1;
+  position: fixed;
+  opacity: 0;
   top: 0;
   right: 0;
   bottom: 0;
@@ -155,5 +165,6 @@ body {
 
   &.active {
     opacity: 1;
+    pointer-events: all;
   }
 }

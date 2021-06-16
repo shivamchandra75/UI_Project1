@@ -16,7 +16,7 @@
   </head>
   <body>
     <section id="main">
-      <div class="button">
+      <div data-modal-target="#modal" class="button">
         <button class="btn"><i class="fas fa-plus"></i></button>
       </div>
     </section>
@@ -50,11 +50,13 @@
 
         <div class="buttons">
           <button id="publish">Publish</button>
-          <button id="cancel">Cancel</button>
+          <button data-close-button id="cancel">Cancel</button>
         </div>
       </div3>
 
-      <div class="cross"><i class="fas fa-times"></i></div>
+      <button data-close-button class="cross">
+        <i class="fas fa-times"></i>
+      </button>
     </div>
 
     <div id="overlay"></div>
