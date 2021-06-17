@@ -26,12 +26,11 @@
     </section>
 
     <div class="modal" id="modal">
-      <!--These divs have no. with them correct them-->
-      <div1 class="form">
+      <div class="form">
         <form onsubmit="return false">
           <h4>Title</h4>
           <div class="title">
-            <input type="text" />
+            <input type="text" class="title-input" />
             <i class="fas fa-search"></i>
           </div>
 
@@ -47,13 +46,11 @@
             rows="4"
           ></textarea>
         </form>
-      </div1>
+      </div>
 
-      <!--These divs have no. with them correct them-->
-      <div2 class="line"></div2>
+      <div class="line"></div>
 
-      <!--These divs have no. with them correct them-->
-      <div3 class="display-data-container">
+      <div class="display-data-container">
         <div class="display-data">
           <div class="l-part">
             <span id="one">Daily UI::</span>
@@ -63,14 +60,19 @@
 
           <div class="line2"></div>
 
-          <div class="r-part"></div>
+          <div class="r-part">
+            <h3 id="display-input-title">Card Title</h3>
+            <p id="display-input-description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+          </div>
         </div>
 
         <div class="buttons">
           <button id="publish">PUBLISH</button>
           <button data-close-button id="cancel">CANCEL</button>
         </div>
-      </div3>
+      </div>
 
       <button data-close-button class="cross">
         <span class="material-icons">close</span>
