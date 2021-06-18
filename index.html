@@ -19,13 +19,17 @@
     />
   </head>
   <body>
+    <!-- Flexbox -->
     <section id="main">
       <div data-modal-target="#modal" class="button">
         <span class="material-icons btn"> add_circle </span>
       </div>
     </section>
 
+    <!--This is the whole pop-up card-->
+    <!-- Flexbox-->
     <div class="modal" id="modal">
+      <!-- Flexbox-->
       <div class="form">
         <form onsubmit="return false">
           <h4>Title</h4>
@@ -48,26 +52,31 @@
         </form>
       </div>
 
+      <!--This is the bigger Seperator line of the pop-up card-->
       <div class="line"></div>
 
+      <!-- This is div to display the input  -->
+      <!-- Grid-->
       <div class="display-data-container">
+        <!-- Grid-->
         <div class="display-data">
           <div class="l-part">
-            <span id="one">Daily UI::</span>
-            <span id="two">001</span>
-            <span id="three">Signup</span>
+            <span class="one">Daily UI::</span>
+            <span class="two">001</span>
+            <span id="display-input-title" class="three">Signup</span>
           </div>
 
           <div class="line2"></div>
 
           <div class="r-part">
-            <h3 id="display-input-title">Card Title</h3>
+            <h3 class="r-heading">Design Hint</h3>
             <p id="display-input-description">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </p>
           </div>
         </div>
 
+        <!-- Flexbox-->
         <div class="buttons">
           <button id="publish">PUBLISH</button>
           <button data-close-button id="cancel">CANCEL</button>

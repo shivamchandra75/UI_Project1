@@ -130,27 +130,31 @@ body {
       border: 1px solid black;
       border-radius: 0.5rem;
       margin: 0.5rem;
-      display: flex;
-      justify-content: space-around;
+      display: grid;
+      justify-content: center;
       align-items: center;
-      padding: 1rem;
+      grid-template-areas: "title line description";
+      grid-template-columns: 40% 5% 55%;
+      padding: 0.5rem;
 
       .l-part {
         display: flex;
         justify-content: center;
         flex-direction: column;
-        #one {
+        grid-area: title;
+        justify-self: center;
+        .one {
           text-align: center;
           font-size: 1.5rem;
           font-weight: map-get($fontWeights, bolder);
         }
-        #two {
+        .two {
           text-align: center;
           font-size: 1.5rem;
           font-weight: map-get($fontWeights, bolder);
         }
 
-        #three {
+        .three {
           text-align: center;
           font-size: 1.5rem;
           font-weight: map-get($fontWeights, bolder);
@@ -160,23 +164,28 @@ body {
       }
 
       .line2 {
+        grid-area: line;
         width: 0.25rem;
         background-color: $primarycolor;
         height: 7.5rem;
+        justify-self: center;
       }
 
       .r-part {
+        grid-area: description;
         display: grid;
         grid-template-rows: 1fr 3fr;
         height: 8rem;
         max-width: 14rem;
+        justify-self: center;
 
-        #display-input-title {
+        .r-heading {
           text-align: center;
         }
         #display-input-description {
           text-align: center;
           font-size: 0.75rem;
+          overflow-y: hidden;
         }
       }
     }
